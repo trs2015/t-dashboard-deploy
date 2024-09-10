@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+button {
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+/* ========================================== TAILWIND STYLES */
+@layer utilities {
+  .breadcrumb-home {
+    @apply text-primary transition duration-150 ease-in-out hover:text-primary-accent-300 focus:text-primary-accent-300 active:text-primary-accent-300 motion-reduce:transition-none
+  }
+  .primary-button {
+    @apply px-4 py-2 rounded-full bg-blue-100 hover:bg-blue-200 text-blue-800 mr-2;
+  }
+  .icon-button {
+    @apply p-2 rounded-full bg-blue-100 text-blue-600 mr-2;
+  }
+  .input {
+    @apply pl-5 pr-4 py-2 w-full border-2 border-gray-300 bg-white rounded-lg focus:outline-none focus:border-blue-500;
+  }
+}
